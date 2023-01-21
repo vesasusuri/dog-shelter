@@ -1,13 +1,12 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import "./banner2.scss";
+import "./banner3.scss";
 import StyledLink from "../../shared/StyledLink/StyledLink";
 
 const Banner3 = () => {
   return (
     <div className="banner3">
-      <div className="inner-banner-photo"></div>
-
+     
       <div
         className="info"
         data-aos="fade-up"
@@ -15,14 +14,20 @@ const Banner3 = () => {
       >
         <h1>
           <FormattedMessage
-            id="home-banner2-title"
-            defaultMessage="How to take care of your pets"
+            id="home-banner3-title"
+            defaultMessage="Requirements for guests:"
           />
         </h1>
         <p>
           <FormattedMessage
-            id="home-banner-text"
-            defaultMessage="Pets need care and attention to keep them healthy, happy and safe. They need healthy food; clean, fresh water; an comfortable place to sleep. Most pets..."
+            id="home-banner3-text"
+            defaultMessage="1. Basic Requirements to Meet your Guest Needs."
+          />
+        </p>
+        <p>
+          <FormattedMessage
+            id="home-banner3-text2"
+            defaultMessage="2. Pets that are very useful to humans, but these pets can not have.."
           />
         </p>
         <div className="links">
@@ -30,14 +35,15 @@ const Banner3 = () => {
             to="/"
             link={
               <FormattedMessage
-                id="About-Us"
-                defaultMessage="About Us"
+                id="view-more"
+                defaultMessage="View More"
               />
             }
           />
           
         </div>
       </div>
+      <div className="inner-banner-photo"></div>
 
     </div>
   );
