@@ -1,0 +1,114 @@
+ .our-vision{
+    margin:max(50px, 5%) 0;
+    padding:0 12.5%;
+    .small-title{
+        width: 37.5%;
+        margin:max(15px, 1vw) auto;
+    } 
+   
+    .items{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .item{
+        background-color: var(--divs-color);
+        padding: 4% 6%;
+        margin:0 2.5%;
+        text-align: center;
+        border-radius: 23px;
+    }
+    .item:hover .icon{
+        svg{ color:#fff; }
+        &::before{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .icon{
+        width: max(47.5px, 3.75vw);
+        height: max(47.5px, 3.75vw);
+        position: relative;
+        margin:0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: max(25px, 2.25vw);
+        color:#000;
+        svg{
+            position: relative;
+            z-index: 2;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            border-radius: 50%;
+            width: 0;
+            height: 0;
+            background: var(--main-color);
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+        }
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    h6{
+        font-size: max(15px, 1vw);
+        margin:max(7.5px, 0.55vw) 0 max(10px, 1vw);
+    }
+    .item p{
+        font-size: max(15px, 0.9vw);
+        color:var(--darker-text);
+    }
+    .centered-item{
+        margin-top: max(25px, 3vw);
+    }
+}
+
+@media(max-width:1475px){
+  .our-vision{
+        padding:0 10%;
+    }
+}
+@media(max-width:1150px){
+   .our-vision{
+        padding:0 7.5%;
+    }
+}
+
+@media(max-width:1020px){
+     .our-vision{
+        padding:0 5%;
+        .small-title, .shared-text{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:768px){
+   .our-vision{
+        .shared-text{
+            margin-bottom: 10px;
+        }
+        .item{
+            width: 45%;
+            margin:20px 2.5%;
+        }
+    }
+}
+@media(max-width:768px){
+    .our-vision .item{
+        width: 90%;
+        margin:15px 5%;
+    }
+}
+
