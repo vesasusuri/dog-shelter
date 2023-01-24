@@ -1,103 +1,66 @@
-// import React, {useState} from 'react'
-// import {Link} from 'react-router-dom'
-// import { FormattedMessage } from "react-intl";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
-// import { CgClose } from 'react-icons/cg'
-// import { MdKeyboardArrowDown } from 'react-icons/md'
-// import { BiSliderAlt, BiSupport,BiChair } from 'react-icons/bi'
-// import { RiInformationFill, RiApps2Fill } from 'react-icons/ri'
-// import { AboutData  } from '../../Navbar/data';
+import { CgClose } from "react-icons/cg";
+import { BiSliderAlt, BiSupport, BiChair } from "react-icons/bi";
+import { RiInformationFill, } from "react-icons/ri";
+import { FaDog} from "react-icons/fa";
 
 
-// const Sidebar = (props) => {    
+const Sidebar = (props) => {
+  return (
+    <div className="mobile-sidebar">
+      <div className="sidebar-logo-row">
+        <Link to="/">
+          <div className="mobile-logo-container"></div>
+        </Link>
+        <button onClick={props.click}>
+          <CgClose />{" "}
+        </button>
+      </div>
 
-//     const [list,showList] = useState(false);
-//     const [list2,showList2] = useState(false);
-//     const [list3,showList3] = useState(false);
-//     function show(){
-//         showList(!list);
-//     }
-//     function show2(){
-//         showList2(!list2);
-//     }
-//     function show3(){
-//         showList3(!list3);
-//     }
+      <div className="mobile-sidebar-links">
+        <div className="sidebar-dropdown">
+          <div className="nav-sidebar-link">
+            <Link to="/" className="nav-anchor">
+              <BiSliderAlt />
+              <FormattedMessage id="services" defaultMessage="Home" />
+            </Link>
+          </div>
+        </div>
 
-//     return (
-//         <div className='mobile-sidebar'>
-//              <div className='sidebar-logo-row'>
-//                 <Link to='/'>
-//                     <div className='mobile-logo-container'></div>
-//                 </Link>
-//                 <button onClick={props.click}><CgClose/> </button>
-//             </div>
+        <div className="nav-sidebar-link">
+          <Link to="/" className="nav-anchor">
+            <RiInformationFill />
+            <FormattedMessage id="Services" defaultMessage="Services" />
+          </Link>
+        </div>
 
-//             <div className='mobile-sidebar-links'>
+        <div className="nav-sidebar-link">
+          <Link to="/" className="nav-anchor">
+            <FaDog />
+            <FormattedMessage id="Animal" defaultMessage="Animal" />
+          </Link>
+        </div>
 
-//                 <div className='sidebar-dropdown'>
-//                     <div className='nav-sidebar-link' onClick={show}>
-//                         <Link to='/' className='nav-anchor'>
-//                             <BiSliderAlt />
-//                             <FormattedMessage id="services" defaultMessage='Home'/> 
-//                         </Link>
-//                     </div> 
-//                 </div>
+        <div className="nav-sidebar-link">
+          <Link to="/" className="nav-anchor">
+            <BiSupport />
+            <FormattedMessage id="contact-us" defaultMessage="Contact Us" />
+          </Link>
+        </div>
+      </div>
 
-//                 <div className='sidebar-dropdown'>
-//                     <div className='nav-sidebar-link' onClick={show2}>
-//                         <Link to='/AllServices' className='nav-anchor'>
-//                             <RiInformationFill />
-//                             <FormattedMessage id="about" defaultMessage='About Us '/> 
-//                         </Link>
-//                         <div className='dropdown-arrow'>
-//                             <MdKeyboardArrowDown/> 
-//                         </div>
-//                     </div>
-//                     {list2===true &&
-//                         <div className="mobile-dopdown">
-//                             {AboutData.map((props) => {
-//                                 return(                         
-//                                     <div className="inner-links">
-//                                         <Link to={props.to}>{props.title}</Link>
-//                                     </div>                            
-//                                 )                            
-//                             })}
-//                         </div>
-//                     } 
-//                 </div>
+      <div className="sidebar-auth">
+        <Link to="/" className="contact-us">
+          <FormattedMessage id="login" defaultMessage="Log In" />
+        </Link>
+      </div>
 
-//                 <div className='nav-sidebar-link'>
-//                     <Link to='/Resources' className='nav-anchor'>
-//                         <BiChair />
-//                         <FormattedMessage id="Furniture" defaultMessage='Furniture' />
-//                     </Link>
-//                 </div>
+      <div className="space"></div>
+    </div>
+  );
+};
 
-//                 <div className='nav-sidebar-link'>
-//                     <Link to='/' className='nav-anchor'>
-//                         <RiApps2Fill />
-//                         <FormattedMessage id="blog" defaultMessage='Blog' />
-//                     </Link>
-//                 </div>
-                
-//                 <div className='nav-sidebar-link'>
-//                     <Link to='/' className='nav-anchor'>
-//                         <BiSupport />
-//                         <FormattedMessage id="contact-us" defaultMessage='Contact Us' /> 
-//                     </Link>
-//                 </div>
-//             </div>
-
-//             <div className='sidebar-auth'>
-//                 <Link to='/' className='contact-us'>
-//                     <FormattedMessage id="login" defaultMessage='Log In' />
-//                 </Link>
-//             </div>
-
-//             <div className='space'></div>
-//         </div>
-//     )
-// }
-
-// export default Sidebar
+export default Sidebar;

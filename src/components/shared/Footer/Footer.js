@@ -19,9 +19,9 @@ const Footer = (props) => {
                         <Link to='/' className='logo-container'>
                             <div className="logo"></div>
                         </Link>
-                        <h5><FormattedMessage id='footer-paragraph1' defaultMessage='Build your dream home with us.' /></h5>
-                        <p><FormattedMessage id='PHONE' defaultMessage='PHONE' />: +383 48 771 188</p>
+                        <h5><FormattedMessage id='footer-paragraph1' defaultMessage='Become a more informed dog owner' /></h5>
                         <p><FormattedMessage id='EMAIL' defaultMessage='EMAIL' />:  vvesasusuri@gmailcom</p>
+                        <p><FormattedMessage id='Explore our blog' defaultMessage='Explore our blog' /></p>
                     </div>
                     <div className="links1">
                         {SocialMedia.map((props) => {

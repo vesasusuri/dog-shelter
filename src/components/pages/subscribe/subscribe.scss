@@ -1,0 +1,81 @@
+.subscribe{
+    margin: max(50px, 5%) 12%;
+    padding:max(40px, 4%) 10%;
+    background: url('../../../assets/shared/bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    border-radius: 23px;
+    color:#fff;
+    position: relative;
+    .text{
+        position: relative;
+        z-index: 2;
+    }
+    h1{
+        font-size: max(30px, 2.5vw);
+        text-align: center;
+    }
+    p{
+        color: #ECECEC;
+        font-size: max(15px, 0.95vw);
+        width: 85%;
+        line-height: 1.7;
+        margin:max(10px, 1vw) 0 max(17.5px, 1.75vw);
+    }
+    .email-container{
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.3);
+        width: 45%;
+        border-radius: max(25px, 2vw);
+        margin:0 auto;
+        @media(max-width:1200px){
+            width: 350px;
+            max-width: 100%;
+        }
+    }
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: max(17.5px, 1.15vw);
+        margin:0 max(5px, 0.35vw) 0 max(2vw, 15px)
+    }
+    input{
+        border:0;
+        padding:0 max(4.5px, 0.25vw)0;
+        background: none;
+        flex: 1;
+        color:#fff;
+        height: max(40px, 3vw);
+        font-size: max(13px, 0.8vw);
+        &::placeholder{
+            color:#fff;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        height: max(40px, 3vw); 
+        background: var(--dark-top);
+        border:0;
+        color:#fff;
+        font-size: max(13.5px, 0.85vw);
+        padding:0 max(20px, 1.75vw);
+        border-radius:max(25px, 2vw) ;
+        @media(max-width:500px){
+           padding:0 15px;
+        }
+    }
+}
+@media(max-width:1000px){
+    .subscribe{
+        background-attachment: unset;
+        margin: 50px 3.5%;
+        padding: 40px 7.5%;
+        p{ width: 100%; }
+    }
+}

@@ -50,31 +50,6 @@ export const FooterData = [
         ]
     },
     {
-        category:<FormattedMessage id='services' defaultMessage='Services' />,
-        links:[
-            {
-                link: <FormattedMessage id='brand-design' defaultMessage='Furniture Design' />,
-                to:'/'
-            },
-            {
-                link: <FormattedMessage id='graphic-design' defaultMessage='Graphic Design' />,
-                to:'/'
-            },
-            {
-                link: <FormattedMessage id='3d-art-work' defaultMessage='3D Room Design' />,
-                to:'/'            
-            },
-            {
-                link: <FormattedMessage id='animations' defaultMessage='Decorations' />,
-                to:'/'
-            },
-            {
-                link: <FormattedMessage id='all-services' defaultMessage='All Services' />,
-                to:'/'
-            }
-        ]
-    },
-    {
         category:<FormattedMessage id='support' defaultMessage='Support' />,
         links:[
             {
